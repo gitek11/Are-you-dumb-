@@ -7,7 +7,16 @@ window.geometry("500x500")
 window.resizable(0,0)
 window.iconbitmap("questhead")
 
+def if_no():
+    btn_no.place(x=randint(10, 400), y=randint(10, 400))
 
+def if_yes():
+    text_dumb.destroy()
+    btn_yes.destroy()
+    btn_no.destroy()
+
+    text_victory = Label(window, text="I KNOW💀", bg="white", font=("consolas", 60, "bold"))
+    text_victory.place(x=50, y=100)
 
 
 
