@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+from tkinter import messagebox
 
 window = Tk()
 window.title("Are you dumb?")
@@ -7,6 +8,9 @@ window.geometry("500x500")
 window.resizable(0,0)
 window.iconbitmap("questhead")
 
+def if_closed():
+    if messagebox.askyesno(title="Are you dumb?", message="Are you Really DUMB?!?"):
+        window.destroy()
 def if_no():
     btn_no.place(x=randint(10, 400), y=randint(10, 400))
 
@@ -19,6 +23,9 @@ def if_yes():
     text_victory.place(x=1, y=100)
 
 
+
+
+window.protocol("WM_DELETE_WINDOW", if_closed)
 
 background = PhotoImage(file=r"background.gif")
 
