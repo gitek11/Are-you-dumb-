@@ -16,7 +16,7 @@ def if_yes():
     btn_no.destroy()
 
     text_victory = Label(window, text="I KNEW IT💀", bg="white", font=("consolas", 60, "bold"))
-    text_victory.place(x=50, y=100)
+    text_victory.place(x=1, y=100)
 
 
 
